@@ -1,1 +1,1 @@
-from .scrobbless improt Scrobbless
+from .scrobbless import Scrobbless
