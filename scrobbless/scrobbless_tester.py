@@ -1,20 +1,25 @@
+#!/usr/bin/env python
+import time
+
 from scrobbless import Scrobbless
 
 s = Scrobbless()
 
 token = s.get_token()
-s.auth_user(token)
 
-session_key = ''
+with open(".scrobbless", 'r+') as f:
+  session_key = f.readline()
 
-while True:
-  session = s.get_session(token)
+  if not session_key:
+    s.auth_user(token)
 
-  try:
-    if session['session']['key']:
+    while not session_key:
+      session = s.get_session(token)
+
       session_key = session['session']['key']
-      break
-  except KeyError:
-    pass
 
-print(session_key)
+    f.write(session_key)
+
+# s.update_np('Saves The Day', 'All-Star Me', 'Through Being Cool', session_key)
+
+s.scrobble('Saves The Day', 'You Vandal', 'Through Being Cool', str(int(time.time())), session_key)
