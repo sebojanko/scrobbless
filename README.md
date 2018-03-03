@@ -6,9 +6,17 @@ A minimal last.fm scrobbler written in Python 3.6
 
 ```pip install scrobbless```
 
+# How to acquire keys
+
+You must register for an API account on last.fm:
+https://www.last.fm/api/account/create
+
+For using the program, two environment variables have to be set:
+SCROBBLESS_API_KEY and SCROBBLESS_SECRET_KEY.
+
 # How to use
 
-First you must request a token:
+First, you must request a token:
 
 ```
 s = Scrobbless()
