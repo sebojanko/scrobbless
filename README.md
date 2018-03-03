@@ -1,5 +1,5 @@
 # scrobbless
-A minimal last.fm scrobbler written in Python 3.6
+A minimal last.fm scrobbling library written in Python 3.6
 
 
 
