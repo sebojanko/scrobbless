@@ -20,6 +20,5 @@ with open(".scrobbless", 'r+') as f:
 
     f.write(session_key)
 
-# s.update_np('Saves The Day', 'All-Star Me', 'Through Being Cool', session_key)
 
 s.scrobble('Saves The Day', 'You Vandal', 'Through Being Cool', str(int(time.time())), session_key)
