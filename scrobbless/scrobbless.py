@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import json
+import os
 import webbrowser
 from hashlib import md5
 
@@ -8,8 +9,8 @@ import requests
 
 class Scrobbless:
   def __init__(self):
-    self.api_key = 'API_KEY'
-    self.secret = 'SECRET'
+    self.api_key = os.environ['SCROBBLESS_API_KEY']
+    self.secret = os.environ['SCROBBLESS_SECRET_KEY']
     self.base_url = 'http://ws.audioscrobbler.com/2.0/?'
     self.response_format = 'json'
 
