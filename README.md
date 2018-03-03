@@ -51,6 +51,10 @@ scrobbles a song.
 
 sets a song as 'now playing'.
 
+# Example
+
+A basic example is located here:
+https://github.com/sebojanko/scrobbless/blob/master/scrobbless/scrobbless_tester.py
 
 
 # LICENSE
