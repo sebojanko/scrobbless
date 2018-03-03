@@ -45,3 +45,6 @@ scrobbles a song.
 ```update_np(artist, track, album, session_key)```
 
 sets a song as 'now playing'.
+
+# LICENSE
+GNU GPL v3
